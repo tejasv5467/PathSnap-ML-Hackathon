@@ -99,11 +99,19 @@ artifacts/                  # Trained models and configurations
 results/                    # Actual development metrics and figures
 requirements.txt
 src/                        # Earlier supporting implementation
-notebooks/                  # Earlier exploration and practice notebooks
+notebooks/                  # Real-data EDA and training results; archived prototypes
 deployment/                 # Earlier practice prototype
 ```
 
 Use the root-level real-data scripts for development. The earlier synthetic practice experiments are not the official baseline.
+
+### Review notebooks
+
+- [01 — Real-data EDA](notebooks/01_EDA.ipynb): reads the supplied development data only; never generates fallback synthetic data.
+- [02 — Real-data model training and comparison](notebooks/02_Model_Training.ipynb): reads the recorded official CSVs, configurations, confusion matrices and HMM comparison. The highest mean trip-grouped CV Macro F1 determines the selected model (HGB in the recorded run). Reproduction commands point to the production scripts; no automatic retraining or weight overwrite.
+- [Archive](notebooks/archive/): the earlier synthetic prototypes are explicitly labelled as historical, not official evaluation evidence. MLP and KNN from those prototypes were not trained on the real PathSnap partition.
+
+Notebook cells have not been re-executed for this documentation update; the displayed baseline table in the training notebook is transcribed programmatically from the original committed metrics.
 
 ## Install on Laptop 1 (model server)
 
