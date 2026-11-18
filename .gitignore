@@ -9,3 +9,6 @@ venv/
 *.nodes
 *.arcs
 *.route
+
+# Local raw data and derived feature caches (including reference labels)
+/data/
