@@ -12,3 +12,5 @@ venv/
 
 # Local raw data and derived feature caches (including reference labels)
 /data/
+/evaluator_test/
+/evaluator_test.zip
